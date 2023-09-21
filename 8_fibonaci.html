@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FIBONACCI SQUARE AND PRIME</title>
+    <style>
+        .container {
+            margin-top: 15rem;
+            font-weight: 900;
+
+        }
+
+        button {
+            height: 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-left: 20px;
+            color: rgb(144, 36, 36);
+            font-size: 18px;
+
+
+        }
+    </style>
+    <script>
+        function fibonacci() {
+            var n = prompt("Enter n value to generate fibonacci series");
+            var fib = [0, 1];
+            for (var i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+
+            alert("the Fibonaaci series of " + n + "is" + fib);
+        }
+        function square() {
+            var n = prompt("Enter n number to generate table of square");
+            var table = "number->square \n";
+            for (var i = 1; i <= n; i++) {
+                var sq = i * i;
+                table += i + "->" + sq + "\n";
+            }
+            alert("table of square\n" + table);
+        }
+        function prime() {
+            var i,
+                flag = true;
+            n = parseInt(n);
+            var n = prompt("Enter the num to check the prime number ");
+
+            for (i = 2; i <= n - 1; i++)
+                if (n % 2 == 0) {
+                    flag = false;
+                    break;
+                }
+
+            if (flag == true) {
+                alert(n + " is prime");
+            } else {
+                alert(n + " is not prime");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1>Fibonacci-Square Generator</h1>
+            <button onclick="fibonacci()" >Generate fibonacci</button>
+            <button onclick="square()">Generate square</button>
+            <button onclick="prime()">Prime number</button>
+        </div>
+    </center>
+</body>
+
+</html>

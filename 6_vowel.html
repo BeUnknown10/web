@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript Functions</title>
+<script>
+function findLeftMostVowel(str)
+{
+ var vowels=['a','e','i','o','u'];
+ str = str.toLowerCase();
+
+  for (var i=0;i<str.length;i++)
+  {
+	if(vowels.includes(str[i]))
+	{ 
+	 return i+1;
+	}
+  }
+  return -1;
+}
+function reverseNumber(num)
+{
+ var reversed=parseInt(num.toString().split('').reverse().join(''));
+ return reversed;
+}
+function demonstrate()
+{
+var inputString='Rakshan Shetty';
+var leftMostVowelPos=findLeftMostVowel(inputString);
+console.log('Left-most vowel position:',leftMostVowelPos);
+
+var inputNumber=963261;
+var reversedNumber=reverseNumber(inputNumber);
+console.log('Reversed number:',reversedNumber);
+document.write("position of vowel is:\n ",leftMostVowelPos,"<br>");
+document.write("\n Reversed number is: ",reversedNumber);
+alert("Position of vowel is:"+leftMostVowelPos)
+alert("Reversed number is:"+reversedNumber)
+}
+</script>
+</head>
+<body>
+<center>
+<h1>JavaScript Functions Demo</h1>
+<hr>
+
+<script>
+demonstrate();
+</script>
+</center>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<DOCTYPE.html>
+    <html>
+    <head>
+    <title>Text Animation</title>
+    <style>
+        #text{
+            font-size:10pt;
+            color:red;
+        }
+    </style>
+    </head>
+    <body>
+    <h1>TEXT ANIMATION</h1>
+    <p id="text">Text-Growing</p>
+    <script>
+    var textElement=document.getElementById("text");
+    var fontSize=10;
+    var growing = true;
+    function Animationtext(){
+        if(growing){
+        fontSize++;
+        textElement.style.fontSize=fontSize+"pt";
+        textElement.style.color="red";
+        
+        if(fontSize===50){
+        growing=false;
+        textElement.innerHTML="TEXT-SHRINKING";
+        textElement.style.color="blue";
+        }
+        }
+        else{
+        fontSize--;
+        textElement.style.fontSize=fontSize+"pt";
+        if(fontSize===5){
+        clearInterval(animationinterval);
+        }
+        }
+    }	
+
+    var animationinterval= setInterval(Animationtext,100);
+    </script>
+    </body>
+    </html>

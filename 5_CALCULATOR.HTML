@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Calculater</title>
+<style>
+body{
+border: 3px solid ;
+margin:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+/* font: bold; */
+/* font-size: 20px; */
+background-color: antiquewhite;
+}
+h1{
+    color: blue;
+}
+hr{
+    padding: 5px;
+    /* color: blue; */
+}
+input{
+padding-top:4px;
+margin:10px;
+
+}
+button{
+    background:linear-gradient(60deg,blue,red,green,violet);
+    color: white;
+    padding: 6px;
+    margin: 8px;
+    font-size: 15px bold;
+    border-radius: 15%;
+}
+
+</style>
+<script>
+function calc(){
+	var num1 = parseFloat(document.getElementById("numb1").value);
+	var num2 = parseFloat(document.getElementById("numb2").value);
+	
+	
+	var su=num1+num2;
+	var sub=num1-num2;
+	var produ=num1*num2;
+	var divi = num1/num2;
+	
+	document.getElementById("Sum").value=su;
+	document.getElementById("difference").value=sub;
+	document.getElementById("product").value=produ;
+	document.getElementById("quotient").value=divi;
+	
+	
+}
+</script>
+</head>
+<body>
+<center>
+	<div>
+<h1>CALCULATOR</h1>
+<hr>
+<label for="n1">Number 1</label>
+<input type="Number" id="numb1" placeholder="num1" required>
+<br>
+<label for="n2">Number 2</label>
+<input type="Number" id="numb2" placeholder="num2" required><br>
+<button type="submit" onclick="calc()">Calculate</button>
+<button type="reset" id="reset"> Reset</button>
+<br>
+<label for="S">Sum</label>
+<input type="text" id="Sum">
+<br>
+<label for="diff">Difference</label>
+<input type="text" id="difference">
+<br>
+<label for="prod">Product</label>
+<input type="text" id="product">
+<br>
+<label for="divi">Quotient</label>
+<input type="text" id="quotient">
+<br>
+</div>
+</center>
+</body>
+</html>

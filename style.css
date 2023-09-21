@@ -1,0 +1,24 @@
+body{
+    background: linear-gradient(60deg,red,rgb(148, 148, 255));
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: white;   
+}
+table{
+    padding: 10px;
+    background-color:rgb(191, 174, 208);
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+
+.lab{
+    background-color: rgb(200, 200, 148);
+}
+
+img{
+    border-radius: 50%;
+}

@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<title>USN Check using JS</title>
+<style>
+*{
+    color: blue;
+border-radius: 20px;
+padding: 10PX;
+
+}
+form input{
+height:40px;
+width: 350px;
+margin:10px;
+
+}
+label{
+    font-weight: 600;
+}
+.container{
+padding: 40px;
+/* background-color: gray; */
+background: linear-gradient(60deg,rgb(152, 152, 34),green,rgb(170, 125, 44),rgb(155, 155, 34));
+font-size: 35px;
+}
+button{
+    font-size: 35px;
+    background: linear-gradient(60deg,yellow,green,orange,yellow);
+    font-weight: 900;
+
+}
+</style>
+<script>
+function validateusn(){
+var usninput=document.getElementById("USN").value;
+var seminput=document.getElementById("sem").value;
+var usnregex= /^[1-4][A-Z]{2}\d{2}[A-Z]{2}\d{3}$/
+var semregex = /^[1-8]$/
+if (!usnregex.test(usninput)){
+alert("Invalid USN!!!")
+return false;
+}
+if(!semregex.test(seminput)){
+alert("Invalid Semester!!!");
+return false;
+}
+alert("Success");
+return true;
+}
+</script>
+</head>
+<body>
+<center> 
+    <div class="container">
+<h1>USN SEMESTER VALIDATE</h1>
+<hr><hr>
+<form onsubmit="validateusn()">
+	<label>USN</label>
+	<input type="text" id="USN" name="USN">
+	<br>
+	<label for="sem">SEM</label>
+	<input type="text" id="sem" name="semester"><br>
+	<button type="submit" value="submit">SUBMIT</button>
+</form>
+</div>
+</center>
+
+
+</body>
+</html>

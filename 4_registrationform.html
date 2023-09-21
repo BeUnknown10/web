@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="regitration.css">
+
+</head>
+<body>
+    <center>
+  <h1>Registration Form</h1>
+  <hr>
+  <form action="submit.php" method="post">
+    <p>Name: <input type="text" name="name" required placeholder="NAME"></p>
+    <p>Email: <input type="email" name="email" required placeholder="Enter the Email Here "></p>
+    <p>Password: <input type="password" name="password" required placeholder="........."></p>
+    <p>Phone Number: <input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="+91 IND"></p>
+    <p>Languages: 
+      <input type="checkbox" name="language[]" value="English">English
+      <input type="checkbox" name="language[]" value="Spanish">Spanish
+      <input type="checkbox" name="language[]" value="French">French
+      <input type="checkbox" name="language[]" value="German">German
+    </p>
+    <p>USN: <input type="text" name="usn" maxlength="10" required placeholder="4CB21...."></p>
+    <input type="text-area" placeholder="enter here">
+    <textarea name="" id="" cols="30" rows="10" placeholder="enter the mssg here"></textarea>
+
+    <p>semester <input type="radio" name="radio1">sem3 <input type="radio" name="radio1">sem4 <input type="radio" name="radio1">sem5 <input type="radio" name="radio1">sem6</p>     
+    <label for="Branch">Branch</label>
+                    <select name="Branch"  id="Branch" class="branch">
+                        <option value="CSE" class="branch">CSE</option>
+                        <option value="ECE" class="branch">ECE</option>
+                        <option value="ISE"  class="branch">ISE</option>
+                        <option value="ME"  class="branch">ME</option>
+                        <option value="AIML"  class="branch">AIML</option>
+                        <option value="CSD"  class="branch">CSD</option>
+                        <option value="CSBS"  class="branch">CSBS</option>
+                    </select>
+    <div class="btn">
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+  </form>
+</center>
+</body>
+</html>
